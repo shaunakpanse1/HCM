@@ -45,3 +45,7 @@ steps:
     tagSource: 'gitTag'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
+    - task: VSTest@3
+      inputs:
+        testSelector: 'testRun'
+        searchFolder: '$(System.DefaultWorkingDirectory)'
